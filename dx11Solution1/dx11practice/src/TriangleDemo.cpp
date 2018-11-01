@@ -12,7 +12,6 @@ TriangleDemo::TriangleDemo()
 ,inputLayout_(0)
 ,vertexBuffer_(0)
 {
-
 }
 
 TriangleDemo::~TriangleDemo()
@@ -22,7 +21,7 @@ TriangleDemo::~TriangleDemo()
 bool TriangleDemo::LoadContent()
 {
     ID3DBlob * vsBuffer = 0;
-    bool compileResult = CompileD3DShader("shd/SolidGreenColor.fx", "VS_Main", "vs_4_0", &vsBuffer);
+    bool compileResult = CompileD3DShader("shd/TriangleDemo.fx", "VS_Main", "vs_4_0", &vsBuffer);
     if(compileResult == false)
     {
         MessageBox(0, "Error loading vertex shader!", "Compile Error", MB_OK);
@@ -61,7 +60,7 @@ bool TriangleDemo::LoadContent()
         return false;
 
     ID3DBlob * psBuffer = 0;
-    compileResult = CompileD3DShader("shd/SolidGreenColor.fx", "PS_Main", "ps_4_0", &psBuffer);
+    compileResult = CompileD3DShader("shd/TriangleDemo.fx", "PS_Main", "ps_4_0", &psBuffer);
     if(compileResult == false)
     {
         MessageBox(0, "Error loading pixel shader!", "Compile Error", MB_OK);

@@ -27,6 +27,9 @@
     <ClCompile Include="src\TriangleDemo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\TextureDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Dx11DemoBase.h">
@@ -36,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="inc\TriangleDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\TextureDemo.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
