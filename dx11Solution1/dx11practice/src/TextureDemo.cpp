@@ -112,7 +112,7 @@ bool TextureDemo::LoadContent()
     ///Texture
     d3dResult = D3DX11CreateShaderResourceViewFromFile(
         d3dDevice_, 
-        "res/decal.dds", 
+        "res/TextureDemo.dds", 
         0, 0, 
         &colorMap_, 
         0

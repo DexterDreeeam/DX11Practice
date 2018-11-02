@@ -30,6 +30,12 @@
     <ClCompile Include="src\TextureDemo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameSprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameSpriteDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Dx11DemoBase.h">
@@ -42,6 +48,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="inc\TextureDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\GameSprite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\GameSpriteDemo.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
