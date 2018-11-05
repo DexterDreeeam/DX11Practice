@@ -143,6 +143,7 @@
     <ClCompile Include="src\GameSprite.cpp" />
     <ClCompile Include="src\GameSpriteDemo.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\TextDemo.cpp" />
     <ClCompile Include="src\TextureDemo.cpp" />
     <ClCompile Include="src\TriangleDemo.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="inc\Dx11DemoBase.h" />
     <ClInclude Include="inc\GameSprite.h" />
     <ClInclude Include="inc\GameSpriteDemo.h" />
+    <ClInclude Include="inc\TextDemo.h" />
     <ClInclude Include="inc\TextureDemo.h" />
     <ClInclude Include="inc\TriangleDemo.h" />
   </ItemGroup>
