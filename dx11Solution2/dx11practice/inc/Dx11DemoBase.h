@@ -7,6 +7,7 @@
 #include <dinput.h>
 
 #define KEYDOWN(name, key) (name[key] & 0x80)
+#define BUTTONDOWN(device, key) (device.rgbButtons[key] & 0x80)
 
 class Dx11DemoBase
 {
@@ -38,7 +39,15 @@ protected:
     ID3D11RenderTargetView * backBufferTarget_;
 
     LPDIRECTINPUT8 directInput_;
+
     LPDIRECTINPUTDEVICE8 keyboardDevice_;
     char keyboardKeys_[256];
     char prevKeyboardKeys_[256];
+
+    LPDIRECTINPUTDEVICE8 mouseDevice_;
+    DIMOUSESTATE mouseState_;
+    DIMOUSESTATE prevMouseState_;
+    long mousePosX_;
+    long mousePosY_;
+    long mouseWheel_;
 };

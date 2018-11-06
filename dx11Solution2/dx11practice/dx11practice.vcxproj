@@ -141,10 +141,12 @@
     <ClCompile Include="src\Dx11DemoBase.cpp" />
     <ClCompile Include="src\KeyboardDemo.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MouseDemo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Dx11DemoBase.h" />
     <ClInclude Include="inc\KeyboardDemo.h" />
+    <ClInclude Include="inc\MouseDemo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

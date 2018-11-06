@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "KeyboardDemo.h"
+#include "MouseDemo.h"
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 
@@ -36,8 +37,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 
     ShowWindow(hwnd, cmdShow);
 
-    std::auto_ptr<Dx11DemoBase> demo(new KeyboardDemo());
-    
+    //std::auto_ptr<Dx11DemoBase> demo(new KeyboardDemo());
+    std::auto_ptr<Dx11DemoBase> demo(new MouseDemo());
 
     bool result = demo->Initialize(hInstance, hwnd);
     if(result == false)

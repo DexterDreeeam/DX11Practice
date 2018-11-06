@@ -24,12 +24,18 @@
     <ClCompile Include="src\KeyboardDemo.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\MouseDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Dx11DemoBase.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="inc\KeyboardDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\MouseDemo.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -23,12 +23,12 @@ bool Dx11DemoBase::LoadContent()
 
 void Dx11DemoBase::UnloadContent()
 {
-
 }
 
 void Dx11DemoBase::Shutdown()
 {
     UnloadContent();
+
     if(backBufferTarget_)
         backBufferTarget_->Release();
     if(swapChain_)
@@ -42,6 +42,11 @@ void Dx11DemoBase::Shutdown()
         keyboardDevice_->Unacquire();
         keyboardDevice_->Release();
     }
+    if(mouseDevice_)
+    {
+        mouseDevice_->Unacquire();
+        mouseDevice_->Release();
+    }
     if(directInput_)
         directInput_->Release();
 
@@ -50,6 +55,7 @@ void Dx11DemoBase::Shutdown()
     swapChain_ = 0;
     backBufferTarget_ = 0;
     keyboardDevice_ = 0;
+    mouseDevice_ = 0;
     directInput_ = 0;
 }
 
@@ -156,7 +162,7 @@ bool Dx11DemoBase::Initialize(HINSTANCE hInstance, HWND hwnd)
 
     d3dContext_->RSSetViewports(1, &viewport);
 
-    ///input
+    ///keyboard input
     ZeroMemory(keyboardKeys_, sizeof(keyboardKeys_));
     ZeroMemory(prevKeyboardKeys_, sizeof(prevKeyboardKeys_));
 
@@ -198,6 +204,32 @@ bool Dx11DemoBase::Initialize(HINSTANCE hInstance, HWND hwnd)
     {
         return false;
     }
+
+    ///mouse input
+    mousePosX_ = mousePosY_ = mouseWheel_ = 0;
+
+    result = directInput_->CreateDevice(
+        GUID_SysMouse,
+        &mouseDevice_,
+        0
+    );
+    if(FAILED(result))
+        return false;
+
+    result = mouseDevice_->SetDataFormat(&c_dfDIMouse);
+    if(FAILED(result))
+        return false;
+
+    result = mouseDevice_->SetCooperativeLevel(
+        hwnd_,
+        DISCL_FOREGROUND | DISCL_NONEXCLUSIVE
+    );
+    if(FAILED(result))
+        return false;
+
+    result = mouseDevice_->Acquire();
+    if(FAILED(result))
+        return false;
     
     return LoadContent();
 }
